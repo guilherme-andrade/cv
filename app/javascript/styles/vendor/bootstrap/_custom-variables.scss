@@ -13,8 +13,8 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-800: #403f3f !default;
+$gray-900: #151515 !default;
 $black:    #000 !default;
 
 // fusv-disable
@@ -67,7 +67,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
@@ -242,6 +242,11 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  6: $spacer * 5,
+  7: $spacer * 7.5,
+  8: $spacer * 10,
+  9: $spacer * 12.5,
+  10: $spacer * 15
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -250,8 +255,8 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-bg:                   $black !default;
+$body-color:                $gray-100 !default;
 $body-text-align:           null !default;
 
 
@@ -259,7 +264,7 @@ $body-text-align:           null !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+$link-color:                              $body-color !default;
 $link-decoration:                         underline !default;
 $link-hover-color:                        darken($link-color, 15%) !default;
 $link-hover-decoration:                   null !default;
@@ -273,7 +278,7 @@ $stretched-link-z-index:                  1 !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   2rem !default;
 
 
 // Grid breakpoints
@@ -383,7 +388,7 @@ $embed-responsive-aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      $text-font;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--bs-font-sans-serif) !default;
@@ -392,14 +397,14 @@ $font-family-code:            var(--bs-font-monospace) !default;
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text
 $font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-base:              2rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .60 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
+$font-weight-normal:          500 !default;
+$font-weight-bold:            600 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
@@ -418,25 +423,25 @@ $h6-font-size:                $font-size-base !default;
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-bold !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
+  1: 7.5rem,
+  2: 6rem,
+  3: 5rem,
+  4: 4rem,
   5: 3rem,
-  6: 2.5rem
+  6: 2rem
 ) !default;
 
 $display-font-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
-$lead-font-size:              $font-size-base * 1.25 !default;
+$lead-font-size:              $font-size-base * 1.5 !default;
 $lead-font-weight:            300 !default;
 
 $small-font-size:             .875em !default;
@@ -859,7 +864,7 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 
 // Navbar
 
-$navbar-padding-y:                  $spacer / 2 !default;
+$navbar-padding-y:                  $spacer * 2 !default;
 $navbar-padding-x:                  null !default;
 
 $navbar-nav-link-padding-x:         .5rem !default;
@@ -878,9 +883,9 @@ $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
 
-$navbar-dark-color:                 rgba($white, .55) !default;
-$navbar-dark-hover-color:           rgba($white, .75) !default;
-$navbar-dark-active-color:          $white !default;
+$navbar-dark-color:                 $body-color !default;
+$navbar-dark-hover-color:           $body-color !default;
+$navbar-dark-active-color:          $body-color !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
@@ -1044,7 +1049,7 @@ $toast-max-width:                   350px !default;
 $toast-padding-x:                   .75rem !default;
 $toast-padding-y:                   .25rem !default;
 $toast-font-size:                   .875rem !default;
-$toast-color:                       null !default;
+$toast-color:                       $body-color !default;
 $toast-background-color:            rgba($white, .85) !default;
 $toast-border-width:                1px !default;
 $toast-border-color:                rgba(0, 0, 0, .1) !default;

@@ -1,0 +1,14 @@
+pre {
+  border: none !important;
+  box-shadow: none !important;
+  background: darken($body-bg, 5%) !important;
+
+   code[class*="language-"] {
+    font-family: Menlo;
+    text-shadow: none;
+
+    &.small {
+      font-size: 1.5rem;
+    }
+  }
+}

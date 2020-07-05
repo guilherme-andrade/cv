@@ -19,10 +19,12 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'guard-livereload'
   gem 'listen', '~> 3.2'
-  gem 'spring'
+  gem 'rack-livereload'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring'
+  gem 'web-console', '>= 3.3.0'
 end
 
 

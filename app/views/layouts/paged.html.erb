@@ -3,7 +3,8 @@
   <%= render 'head' %>
 
   <body>
-    <%= render 'navbar' %>
-    <%= yield %>
+    <main data-controller="paged">
+      <%= yield %>
+    </main>
   </body>
 </html>

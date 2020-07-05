@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
-  def home
-  end
+  layout 'paged'
+
+  def home; end
 end
