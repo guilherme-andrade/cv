@@ -1,2 +1,3 @@
-import './prism';
 import './bootstrap';
+import './prism';
+import './rails';

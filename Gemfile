@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem 'acts-as-taggable-on'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'image_processing', '~> 1.2'
 gem 'jbuilder', '~> 2.7'
