@@ -6,6 +6,7 @@ class CreateJobs < ActiveRecord::Migration[6.0]
       t.string :role
       t.date :start_date
       t.date :end_date
+      t.string :slug
 
       t.timestamps
     end

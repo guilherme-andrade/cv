@@ -1,5 +1,7 @@
 class StaticController < ApplicationController
-  layout 'paged'
+  def home
+    render layout: 'paged'
+  end
 
-  def home; end
+  def contact; end
 end

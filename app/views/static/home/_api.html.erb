@@ -37,8 +37,15 @@
             </div>
           </div>
           <div class="col-12 col-lg-7">
-          <p class="small mb-0 text-muted">Output</p>
-            <pre><code class="language-ruby small"><%= render 'json_snippets/about_me' %></code></pre>
+          <p class="small mb-3 text-muted">
+            Output
+          </p>
+          <pre
+            class="px-4 py-3 rounded-lg fp-scrollable"
+            data-controller="formatted-code-loader"
+            data-formatted-code-loader-language="json"
+            data-formatted-code-loader-url="<%= api_v1_me_path %>"
+          ></pre>
           </div>
         </div>
       </div>

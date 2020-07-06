@@ -1,0 +1,26 @@
+<div class="container py-8">
+  <div class="mb-10">
+    <h1 class="display-1">
+      Portfolio
+    </h1>
+    <p class="lead font-italic">
+      /pɔː(r)tˈfəʊliəʊ/
+    </p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-lg-2 g-5">
+    <% @projects.each do |project| %>
+      <div class="col mb-">
+        <article class="card bg-transparent text-white">
+          <%= image_tag project.card_cover, class: 'rounded h-9 w-100 img-cover shadow-lg' %>
+          <div class="card-body py-4">
+            <h1 class="h2 card-title my-2">
+              <%= project.title %>
+            </h1>
+          </div>
+          <%= link_to '', project, class: 'stretched-link' %>
+        </article>
+      </div>
+    <% end %>
+  </div>
+</div>

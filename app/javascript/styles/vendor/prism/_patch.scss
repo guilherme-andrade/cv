@@ -2,13 +2,12 @@ pre {
   border: none !important;
   box-shadow: none !important;
   background: darken($body-bg, 5%) !important;
+  max-height: 350px;
+  overflow-y: scroll;
 
-   code[class*="language-"] {
+  code {
     font-family: Menlo;
     text-shadow: none;
-
-    &.small {
-      font-size: 1.5rem;
-    }
+    font-size: 1.5rem;
   }
 }

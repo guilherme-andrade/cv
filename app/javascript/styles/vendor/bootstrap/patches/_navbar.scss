@@ -2,26 +2,4 @@
   &-brand {
     font-weight: 600;
   }
-
-  .nav-link {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      background: $body-color;
-      height: 3px;
-      left: 50%;
-      bottom: 0;
-      width: 0%;
-      transition: all .25s ease-in-out;
-    }
-
-    &:hover {
-      &::after {
-        width: 100%;
-        left: 0;
-      }
-    }
-  }
 }

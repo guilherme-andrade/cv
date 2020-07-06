@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_07_05_153025) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
+    t.string "slug"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -73,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_07_05_153025) do
     t.string "role"
     t.date "start_date"
     t.date "end_date"
+    t.string "slug"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["address_id"], name: "index_jobs_on_address_id"
@@ -83,6 +85,11 @@ ActiveRecord::Schema.define(version: 2020_07_05_153025) do
     t.string "company_name"
     t.date "start_date"
     t.date "end_date"
+    t.string "country"
+    t.string "url"
+    t.integer "status"
+    t.text "description"
+    t.string "slug"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

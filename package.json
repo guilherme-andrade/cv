@@ -8,6 +8,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^5.1.1",
     "animate.css": "^4.1.0",
+    "axios": "^0.19.2",
     "bootstrap": "^5.0.0-alpha1",
     "bootstrap-icons": "^1.0.0-alpha5",
     "devicon-patched-with-stimulus": "2.2.1",
