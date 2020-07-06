@@ -1,5 +1,5 @@
 class Private::ArticlesController < Private::BaseController
-  before_action :set_article, only: %i[update edit destroy]
+  before_action :find_article, only: %i[update edit destroy]
 
   def new
     @article = Article.new
@@ -40,7 +40,7 @@ class Private::ArticlesController < Private::BaseController
 
   private
 
-  def set_article
+  def find_article
     @article = Article.find(params[:id])
   end
 end

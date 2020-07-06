@@ -8,7 +8,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :articles, only: %i[show index]
+  resources :projects, only: %i[show index]
+
   namespace :private do
-    resources :articles, only: %i[new create edit update destrou]
+    resources :articles, except: %i[show index]
+    resources :projects, except: %i[show index]
   end
 end

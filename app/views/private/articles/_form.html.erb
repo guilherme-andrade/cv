@@ -1,0 +1,5 @@
+<%= simple_form_for [:private, @article] do |f| %>
+  <%= f.input :title %>
+  <br>
+  <%= f.rich_text_area :content %>
+<% end %>

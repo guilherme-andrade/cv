@@ -1,2 +1,2 @@
-class Api::V1::MeController < Api::ApplicationController
+class Api::V1::BaseController < Api::ApplicationController
 end

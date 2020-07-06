@@ -352,7 +352,7 @@ $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 
 $component-active-color:      $white !default;
-$component-active-bg:         $primary !default;
+$component-active-bg:         $light !default;
 
 $caret-width:                 .3em !default;
 $caret-vertical-align:        $caret-width * .85 !default;
@@ -626,11 +626,11 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              $white !default;
+$input-bg:                              $body-bg !default;
 $input-disabled-bg:                     $gray-200 !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           $gray-700 !default;
+$input-color:                           $body-color !default;
 $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;
