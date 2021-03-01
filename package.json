@@ -14,7 +14,7 @@
     "devicon-patched-with-stimulus": "2.2.1",
     "fullpage.js": "^3.0.8",
     "popper.js": "^1.16.1",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.23.0",
     "resolve-url-loader": "^3.1.1",
     "stimulus": "^1.1.1",
     "stimulus_reflex": "^3.2.3",
